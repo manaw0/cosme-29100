@@ -6,8 +6,6 @@ class Item < ApplicationRecord
     validates :text
     validates :category_id
     validates :status_id
-    validates :shipping_fee_id
-    validates :prefecture_id
-    validates :shipping_days_id
+    validates :age_id
   end
 end
