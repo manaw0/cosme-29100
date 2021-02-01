@@ -5,35 +5,32 @@
   <%#= form.submit "検索", class: "search-btn" %>
 <%# end %>
 
-<div class="contents row">
+<div class="contents-row">
+  <ul class="item-contents">
   <% @items.each do |item| %>
-        <div class='item-img-content'>
-          <%= image_tag item.image, class: "item-img" %>
-        </div>
-      <div class="more">
-        <span><%#= image_tag 'arrow_top.png' %></span>
-        <ul class="more_list">
-          <li>
-            <%= link_to '詳細', item_path(item.id), method: :get %>
-          </li>
-          <% if user_signed_in? && current_user.id == item.user_id %>
-            <li>
-              <%= link_to '編集', edit_item_path(item.id), method: :get %>
-            </li>
-            <li>
-              <%= link_to '削除', item_path(item.id), method: :delete %>
-            </li>
-          <% end %>
-        </ul>
-      </div>
-      <p><%= item.content %></p>
-      <span class="name">
-        <a href="/users/<%= item.user.id %>">
-          <span>投稿者</span><%= item.user.name %>
-        </a>
-      </span>
+    <li class='list'>
+    <div class='item-title'>
+      <%= item.title %>
     </div>
+    <%= link_to item_path(item.id) do %>
+    <div class='item-img-content'>
+      <%= image_tag item.image, class: "item-img" %>
+    </div>
+    <ul class='contents-list'>
+      <li class='user-name'><a href="/users/<%= item.user.id %>">
+          <%= item.user.name %>
+        </a>
+      </li>
+      <span>
+      <li class="category-name"><%= item.category.name %></li>
+      <li class="status-name"><%= item.status.name %></li>
+      </span>
+    </ul>
+    </div>
+    <% end %>
+    </li>
   <% end %>
+  </ul>
 </div>
 
 <%= render "shared/footer" %>
