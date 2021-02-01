@@ -4,9 +4,10 @@ class Item < ApplicationRecord
 
   with_options presence: true do
     validates :title
-    validates :text
+    validates :content
     validates :category_id, numericality: { other_than: 1 }
     validates :status_id, numericality: { other_than: 1 }
     validates :age_id, numericality: { other_than: 1 }
+    validates :image
   end
 end
