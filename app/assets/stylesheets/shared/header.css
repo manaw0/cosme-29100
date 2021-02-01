@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-page-header {
+  width: 100vw;
+  padding: 2vh 5vw;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(241, 112, 103, 0.945);
+}
+
+.icon {
+  width: 10vw;
+  margin-right: 10vw;
+}
+
+.nav {
+  font-size: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.lists {
+  display: flex;
+}
+
+.user-name {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #f0f0f0;
+  font-weight: bold;
+}
+
+.login {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #f0f0f0;
+}
+
+.logout {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #f0f0f0;
+
+}
+
+.sign-up {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #f0f0f0;
+}
+
