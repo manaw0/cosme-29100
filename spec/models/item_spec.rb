@@ -32,32 +32,32 @@ RSpec.describe Item, type: :model do
       it 'category_idが空では登録できない' do
         @item.category_id = 1
         @item.valid?
-        expect(@item.errors.full_messages).to include("Category must be other than 1")
+        expect(@item.errors.full_messages).to include('Category must be other than 1')
       end
       it 'category_idが空では登録できない2' do
         @item.category_id = nil
         @item.valid?
-        expect(@item.errors.full_messages).to include("Category can't be blank", "Category is not a number")
+        expect(@item.errors.full_messages).to include("Category can't be blank", 'Category is not a number')
       end
       it 'status_idが空では登録できない' do
         @item.status_id = 1
         @item.valid?
-        expect(@item.errors.full_messages).to include("Status must be other than 1")
+        expect(@item.errors.full_messages).to include('Status must be other than 1')
       end
       it 'status_idが空では登録できない2' do
         @item.status_id = nil
         @item.valid?
-        expect(@item.errors.full_messages).to include("Status can't be blank", "Status is not a number")
+        expect(@item.errors.full_messages).to include("Status can't be blank", 'Status is not a number')
       end
       it 'age_idが空では登録できない' do
         @item.age_id = 1
         @item.valid?
-        expect(@item.errors.full_messages).to include("Age must be other than 1")
+        expect(@item.errors.full_messages).to include('Age must be other than 1')
       end
       it 'age_idが空では登録できない2' do
         @item.age_id = nil
         @item.valid?
-        expect(@item.errors.full_messages).to include("Age can't be blank", "Age is not a number")
+        expect(@item.errors.full_messages).to include("Age can't be blank", 'Age is not a number')
       end
     end
   end
