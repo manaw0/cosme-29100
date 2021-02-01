@@ -1,0 +1,16 @@
+.footer {
+  width: 100vw;
+  padding: 2vh;
+} 
+
+.footer-contents {
+  text-align: center;
+}
+
+.icon-footer {
+  width: 10vw;
+}
+
+p {
+  font-size: 12px;
+}
