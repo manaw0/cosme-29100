@@ -6,15 +6,15 @@ RSpec.describe Item, type: :model do
     @item.image = fixture_file_upload('public/images/test_image.png')
   end
 
-  describe '商品出品機能' do
-    context '商品出品がうまくいくとき' do
+  describe '新規投稿機能' do
+    context '新規投稿がうまくいくとき' do
       it '全ての項目が存在すれば登録できる' do
         expect(@item).to be_valid
       end
     end
 
-    context '商品出品がうまくいかないとき' do
-      it 'nameが空だと登録できない' do
+    context '新規投稿がうまくいかないとき' do
+      it 'titleが空だと登録できない' do
         @item.title = ''
         @item.valid?
         expect(@item.errors.full_messages).to include("Title can't be blank")
