@@ -1,6 +1,8 @@
 <%= render "shared/header" %>
 
-<h2>Sign up</h2>
+<div class="user-main">
+  <div class="form-wrap">
+  <h2 class="form-title">Sign up</h2>
 
 <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
   <%= render "shared/error_messages", model: f.object %>
@@ -59,5 +61,6 @@
     <%= f.submit "Sign up",class:'register-btn' %>
   </div>
 <% end %>
-
+  </div>
+</div>
 <%= render "shared/footer" %>
