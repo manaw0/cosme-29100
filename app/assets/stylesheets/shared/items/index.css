@@ -1,30 +1,29 @@
-.contents-row {
+body {
+  line-height: 1.25;
+  font-family: "メイリオ","Meiryo","ＭＳ Ｐゴシック",Verdana,"ヒラギノ角ゴシック",Hiragino Sans,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,sans-serif;
+}
+
+.item-contents-row {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10vh 0;
-  display: flex;
+  padding: 10vh 0; 
+  width: 100vw;
 }
 
 .item-contents {
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .item-title {
-  font-size: 14px;
+  font-size: 22px;
   font-weight: bold;
 }
 
 .item-img-content {
   position: relative;
-}
-
-.item-img {
-  width: 30vw;
-  height: 30vh;
 }
 
 .contents-list {

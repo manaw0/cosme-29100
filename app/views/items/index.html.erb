@@ -5,7 +5,7 @@
   <%#= form.submit "検索", class: "search-btn" %>
 <%# end %>
 
-<div class="contents-row">
+<div class="item-contents-row">
   <ul class="item-contents">
   <% @items.each do |item| %>
     <li class='list'>
@@ -14,7 +14,7 @@
     </div>
     <%= link_to item_path(item.id) do %>
     <div class='item-img-content'>
-      <%= image_tag item.image, class: "item-img" %>
+      <%= image_tag item.image.variant(resize: '500x500'), class: "item-img" %>
     </div>
     <ul class='contents-list'>
       <li class='user-name'><a href="/users/<%= item.user.id %>">
