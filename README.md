@@ -108,7 +108,6 @@ https://cosme-29100.herokuapp.com/
 ・タグ付け機能  
 ・AWSへの画像アップロード
 
-
 # テーブル設計
 
 ## users テーブル
