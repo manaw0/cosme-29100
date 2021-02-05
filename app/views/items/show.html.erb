@@ -1,6 +1,6 @@
 <%= render "shared/header" %> 
  
- <div class="item-contents-row">
+ <div class="item-show-row">
   <div class="contents-show">
     <div class="content-post" >
       <div class="more-list-box">
@@ -8,7 +8,7 @@
       <% if current_user.id == @item.user_id %>
         <div class="more-list">
           <%= link_to image_tag("edit.png"), edit_item_path(@item.id), method: :get %>
-          <%= link_to image_tag("delete.png"), item_path(@item.id), method: :get %>
+          <%= link_to image_tag("delete.png"), item_path(@item.id), method: :delete %>
         </div>
       <% end %>
       </div>
