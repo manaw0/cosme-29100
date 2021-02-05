@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-page-header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(241, 112, 103, 0.945);
+  font-family: "メイリオ","Meiryo"
+}
+
+.logo {
+  margin: 10px;
+}
+
+.icon {
+  width: 10vw;
+}
+
+.nav {
+  font-size: 15px; 
+}
+
+.lists {
+  display: flex;
+  margin-right: 30px;
+}
+
+.user-name {
+  text-decoration: none;
+  color: #f0f0f0;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.login {
+  text-decoration: none;
+  color: #f0f0f0;
+  margin-right: 20px;
+}
+
+.logout {
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: #f0f0f0;
+  margin-right: 20px;
+}
+

@@ -1,0 +1,17 @@
+.footer {
+  width: 100vw;
+  padding: 2vh;
+  font-family: "メイリオ","Meiryo"
+} 
+
+.footer-contents {
+  text-align: center;
+}
+
+.icon-footer {
+  width: 10vw;
+}
+
+p {
+  font-size: 12px;
+}

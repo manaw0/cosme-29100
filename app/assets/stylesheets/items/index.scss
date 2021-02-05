@@ -1,0 +1,63 @@
+.first-view {
+  height: 65vh;
+  background-image: image-url('firstview.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom 20% center;
+}
+
+.item-contents-row {
+  display: flex;
+  justify-content: center;
+  line-height: 1.25;
+  font-family: "メイリオ","Meiryo"
+}
+
+.item-main {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+.item-list{
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  border-bottom: 1px solid gray;
+}
+
+.item-right {
+  margin-left: 100px;
+}
+
+.show-link {
+  text-decoration: none;
+  color: rgba(77, 74, 74, 0.925);
+}
+
+.img-size {
+  width: 30vw;
+}
+
+.item-title-main {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.title-icon {
+  color: rgba(241, 112, 103, 0.945);
+}
+
+.user-name-main {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.category-name {
+  margin-right: 20px;
+}
+
+.status-name {
+  margin-right: 20px;
+}

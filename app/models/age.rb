@@ -8,4 +8,7 @@ class Age < ActiveHash::Base
     { id: 6, name: '50代' },
     { id: 7, name: '非公開' }
   ]
+
+  include ActiveHash::Associations
+  has_many :items
 end

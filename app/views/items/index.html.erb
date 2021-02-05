@@ -5,35 +5,47 @@
   <%#= form.submit "検索", class: "search-btn" %>
 <%# end %>
 
-<div class="contents row">
-  <% @items.each do |item| %>
-        <div class='item-img-content'>
-          <%= image_tag item.image, class: "item-img" %>
-        </div>
-      <div class="more">
-        <span><%#= image_tag 'arrow_top.png' %></span>
-        <ul class="more_list">
-          <li>
-            <%= link_to '詳細', item_path(item.id), method: :get %>
-          </li>
-          <% if user_signed_in? && current_user.id == item.user_id %>
-            <li>
-              <%= link_to '編集', edit_item_path(item.id), method: :get %>
-            </li>
-            <li>
-              <%= link_to '削除', item_path(item.id), method: :delete %>
-            </li>
-          <% end %>
-        </ul>
+<div class="first-view">
+  
+</div>
+
+<div class="item-contents-row">
+  <div class="item-main">
+    <% @items.each do |item| %>
+    <div class="item-list">
+      <div class="item-left">
+        <%= link_to(item_path(item.id), class: 'show-link') do %>
+        <%= image_tag item.image.variant(resize: '300x300'), class: "img-size" %>
       </div>
-      <p><%= item.content %></p>
-      <span class="name">
-        <a href="/users/<%= item.user.id %>">
-          <span>投稿者</span><%= item.user.name %>
-        </a>
-      </span>
+      <div class="item-right">
+        <div class='item-title-main'>
+          <span class="title-icon">▼</span>
+          <%= item.title %>
+        </div>
+     
+        <div class='user-name-main'>
+          <%= image_tag "user.png", class: "user-icon" %>
+          <%= item.user.name %>
+        </div>
+        <ul class='user-status'>
+          <li class="category-name">
+            お悩み:
+            <%= item.category.name %>
+          </li>
+          <li class="status-name">
+            肌質:
+            <%= item.status.name %>
+          </li>
+          <li class="age-name">
+            年代:
+            <%= item.age.name %>
+          </li>
+        </ul>  
+        <% end %>
+      </div>
     </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
 
 <%= render "shared/footer" %>

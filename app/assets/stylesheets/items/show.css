@@ -1,0 +1,71 @@
+.item-show-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0; 
+  width: 100vw;
+  line-height: 1.25;
+  font-family: "メイリオ","Meiryo"
+}
+
+.contents-show {
+  background-color: #FFFFFF;
+  border: 1px solid #B9B9B9;
+  box-sizing: border-box;
+  color:#000000;
+  display:block;
+  padding: 8px;
+  transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  width: 70vw;
+}
+
+.content-post {
+  margin: 20px;
+  border-bottom: 1px solid #B9B9B9;
+}
+
+.item-img-content {
+  margin: 0 0 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.item-img {
+  width: 40vw;
+}
+
+.more-list-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-content {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.user-detail {
+  display: flex;
+  line-height: 1.6;
+  margin: 3px 20px;
+}
+
+.user-page {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.user-status {
+  display: flex;
+  justify-content: space-around;
+  margin-left: auto;
+  color: gray;
+}
+
+.item-content {
+  margin: 0px 20px 20px 20px ;
+}
+
