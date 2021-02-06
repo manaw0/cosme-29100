@@ -40,7 +40,10 @@
             年代:
             <%= item.age.name %>
           </li>
-        </ul>  
+        </ul>
+        <div class="item-time">
+          <span class="content-text"><%= l item.created_at %></span>
+        </div>
         <% end %>
       </div>
     </div>

@@ -25,20 +25,20 @@
         タイトル
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :title, class:"items-text", id:"item-name", placeholder:"タイトル（必須 40文字まで)", maxlength:"40" %>
+      <%= f.text_area :title, class:"items-text", id:"item-name", placeholder:"（必須 30文字まで)", maxlength:"30" %>
       <div class="items-explain">
         <div class="weight-bold-text">
-          説明
+          テキスト
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :content, class:"items-text", id:"item-info", placeholder:"説明（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+        <%= f.text_area :content, class:"items-text", id:"item-info", placeholder:"（必須 500文字まで）" ,rows:"7" ,maxlength:"500" %>
       </div>
     </div>
   
     <div class="items-detail">
       <div class="form">
         <div class="weight-bold-text">
-          カテゴリー
+          お悩み
           <span class="indispensable">必須</span>
         </div>
         <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>

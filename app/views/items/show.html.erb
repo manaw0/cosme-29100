@@ -1,15 +1,17 @@
 <%= render "shared/header" %> 
  
- <div class="item-show-row">
+<div class="item-show-row">
   <div class="contents-show">
     <div class="content-post" >
       <div class="more-list-box">
       <h2 class="item-title"><%= @item.title %></h2>
-      <% if current_user.id == @item.user_id %>
-        <div class="more-list">
-          <%= link_to image_tag("edit.png"), edit_item_path(@item.id), method: :get %>
-          <%= link_to image_tag("delete.png"), item_path(@item.id), method: :delete %>
-        </div>
+      <% if user_signed_in? %>
+        <% if current_user.id == @item.user_id %>
+          <div class="more-list">
+            <%= link_to image_tag("edit.png"), edit_item_path(@item.id), method: :get %>
+            <%= link_to image_tag("delete.png"), item_path(@item.id), method: :delete %>
+          </div>
+        <% end %>
       <% end %>
       </div>
     <div class='item-img-content'>
@@ -30,9 +32,37 @@
     <div class="item-content">
       <span class="content-text"><%= @item.content %></span>
     </div>
+    <div class="item-content">
+      <span class="content-text"><%= l @item.created_at %></span>
+    </div>
     </div>
   </div>
 </div>
+<div class="comment">
+  <div class="container">
+    <% if user_signed_in? %>
+      <%= form_with(model: [@item, @comment], local: true) do |form| %>
+        <%= form.text_area :comment_text, class:"items-text", placeholder: "コメントする", rows: "2" %>
+        <%= form.submit "SEND", class:"register-btn" %>
+      <% end %>
+    <% else %>
+      <p class="caution">※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p>
+    <% end %>
+    <div class="comments">
+      <h4 class="comment-list">＜コメント一覧＞</h4>
+      <% @comments.each do |comment| %>
+        <div class="comment-detail">
+          <%= link_to comment.user.name, "#", class:"comment-user" %>：
+          <%= comment.comment_text %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="back-btn">
+      <%= link_to image_tag("back.png"), root_path %>
+  </div>
+</div>
+
 
 
 <%= render "shared/footer" %>
