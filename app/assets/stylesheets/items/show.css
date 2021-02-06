@@ -93,6 +93,13 @@
   width: 70vw;
 }
 
+.caution {
+  font-size: 13px;
+  font-weight: bold;
+  color: rgba(241, 112, 103, 0.945);
+  margin-bottom: 10px;
+}
+
 .comments {
   margin: 7px 0;
 }
@@ -114,5 +121,5 @@
 .back-btn {
   background-color: #FFFFFF;
   border: none;
-  margin-top: 8px;
+  margin-top: 10px;
 }
