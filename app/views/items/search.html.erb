@@ -1,0 +1,54 @@
+<%= render "shared/header" %>
+
+<div class="first-view">
+</div>
+<div class='search-form'>
+  <%= form_with(url: search_items_path, local: true, method: :get, class: "search-form") do |form| %>
+    <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+    <%= form.submit "検索", class: "search-btn" %>
+  <% end %>
+</div>
+
+<div class="item-contents-row">
+  <div class="item-main">
+    <% @items.each do |item| %>
+    <div class="item-list">
+      <div class="item-left">
+        <%= link_to(item_path(item.id), class: 'show-link') do %>
+        <%= image_tag item.image.variant(resize: '300x300'), class: "img-size" %>
+      </div>
+      <div class="item-right">
+        <div class='item-title-main'>
+          <span class="title-icon">▼</span>
+          <%= item.title %>
+        </div>
+     
+        <div class='user-name-main'>
+          <%= image_tag "user.png", class: "user-icon" %>
+          <%= item.user.name %>
+        </div>
+        <ul class='user-status'>
+          <li class="category-name">
+            お悩み:
+            <%= item.category.name %>
+          </li>
+          <li class="status-name">
+            肌質:
+            <%= item.status.name %>
+          </li>
+          <li class="age-name">
+            年代:
+            <%= item.age.name %>
+          </li>
+        </ul>
+        <div class="item-time">
+          <span class="content-text"><%= l item.created_at %></span>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<%= render "shared/footer" %>
