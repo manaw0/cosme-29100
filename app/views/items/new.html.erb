@@ -2,7 +2,7 @@
 
 <div class="contents-row">
   <div class="items-main">
-    <h2 class="item-itle">新規投稿</h2>
+    <h2 class="form-title">新規投稿</h2>
     <%= form_with model: @item, url:items_path, local: true do |f| %>
 
     <%= render 'shared/error_messages', model: f.object %>
