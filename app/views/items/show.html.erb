@@ -1,6 +1,6 @@
 <%= render "shared/header" %> 
  
- <div class="item-show-row">
+<div class="item-show-row">
   <div class="contents-show">
     <div class="content-post" >
       <div class="more-list-box">
@@ -30,9 +30,37 @@
     <div class="item-content">
       <span class="content-text"><%= @item.content %></span>
     </div>
+    <div class="item-content">
+      <span class="content-text"><%= l @item.created_at %></span>
+    </div>
     </div>
   </div>
 </div>
+<div class="comment">
+  <div class="container">
+    <% if user_signed_in? %>
+      <%= form_with(model: [@item, @comment], local: true) do |form| %>
+        <%= form.text_area :comment_text, class:"items-text", placeholder: "コメントする", rows: "2" %>
+        <%= form.submit "SEND", class:"register-btn" %>
+      <% end %>
+    <% else %>
+      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+    <% end %>
+    <div class="comments">
+      <h4 class="comment-list">＜コメント一覧＞</h4>
+      <% @comments.each do |comment| %>
+        <div class="comment-detail">
+          <%= link_to comment.user.name, "#", class:"comment-user" %>：
+          <%= comment.comment_text %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="back-btn">
+      <%= link_to image_tag("back.png"), root_path %>
+  </div>
+</div>
+
 
 
 <%= render "shared/footer" %>
