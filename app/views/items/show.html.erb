@@ -30,7 +30,7 @@
       </ul>
     </div>
     <div class="item-content">
-      <span class="content-text"><%= @item.content %></span>
+      <span class="content-text"><%= safe_join(@item.content.split("\n"),tag(:br)) %></span>
     </div>
     <div class="item-content">
       <span class="content-text"><%= l @item.created_at %></span>

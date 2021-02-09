@@ -16,4 +16,13 @@ class Item < ApplicationRecord
     validates :age_id, numericality: { other_than: 1 }
     validates :image
   end
+
+  def self.search(search)
+    if search != ""
+      Item.where('content LIKE(?)', "%#{search}%")
+    else
+      Item.all
+    end
+  end
+
 end

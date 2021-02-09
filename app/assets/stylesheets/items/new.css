@@ -19,6 +19,10 @@
   flex-direction: column;
 }
 
+.form-title {
+  margin: 6px 0;
+}
+
 .weight-bold-text {
   font-weight: bold;
   min-width: 170px;
