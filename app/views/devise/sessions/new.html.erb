@@ -19,14 +19,12 @@
     <%= f.password_field :password, class:"input-default", id:"password" %>
   </div>
 
-  <% if devise_mapping.rememberable? %>
   <div class="remember">
-    
+    <% if devise_mapping.rememberable? %>
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
-   
+    <% end %>   
   </div>
-  <% end %>
 
   <div class="actions">
     <%= f.submit "Log in",class:'register-btn' %>
