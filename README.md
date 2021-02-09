@@ -1,6 +1,6 @@
 ### :lipstick: アプリケーション名
 
-## :lipstick: Cosmegram
+## Cosmegram
 
 ## :lipstick: アプリケーション概要
 
@@ -13,7 +13,7 @@
 
 https://cosme-29100.herokuapp.com/
 
-## :lipstick: ID/PW
+## :lipstick: Basic認証のID/PW
 
 ・ID：admin  
 ・PW：1111
@@ -45,7 +45,7 @@ Cosmegramは、自分の持っているお気に入りの化粧品の情報を�
 
 <img width="1392" alt="要件定義" src="https://user-images.githubusercontent.com/71313417/107369820-90121c00-6b25-11eb-99d4-662e52ba8dfc.png">  
 
-## :lipstick: 実装した昨日のDEMO
+## :lipstick: 実装した機能のDEMO
 
 ### ① 新規ユーザー登録・ログイン機能
 投稿内容は未ログイン・ユーザー未登録状態でも閲覧可能です。  
